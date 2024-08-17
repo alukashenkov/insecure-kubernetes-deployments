@@ -64,3 +64,37 @@ terraform/.terraform.lock.hcl
 terraform/.terraform.tfstate.lock.info
 node_modules
 node_modules
+
+# macOS specific files
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# macOS metadata files
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# macOS related to Trash
+.Trash-*
+
+# macOS specific resource forks
+._*
+
+# macOS Finder window state
+.FBCIndex
+.FBC*Index
+
+# macOS tags
+.TemporaryItems
+.apdisk
