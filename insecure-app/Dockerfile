@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y python3 python3-pip curl apt-transport-https ca-certificates software-properties-common && \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
+    add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
     apt-get update && \
     apt-get install -y docker-ce-cli && \
     apt-get clean && \
@@ -19,8 +19,8 @@ RUN mkdir /app
 WORKDIR /app
 
 # Add application and requirements.txt
-ADD ./insecure-app/app.py /app/
-ADD ./insecure-app/requirements.txt /app/ 
+ADD app.py /app/
+ADD requirements.txt /app/ 
 
 # Install Python packages from requirements.txt
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
