@@ -5,8 +5,8 @@ RUN mkdir /app
 WORKDIR /app
 
 # Add application and package
-ADD ./insecure-js/package.json /app/
-ADD ./insecure-js/server.js /app/ 
+ADD package.json /app/
+ADD server.js /app/ 
 
 RUN npm install
 
